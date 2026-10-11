@@ -19,8 +19,8 @@
   // Adresse /exec de la web app Apps Script (compte attilaqhse@gmail.com) — ne change pas tant qu'on garde le même déploiement
   const EXEC_URL = 'https://script.google.com/macros/s/AKfycbx0Xat5qVY4MyvDA9IQ18nBKkWAGRhtSjlXrrS6InmbQ1-CtFDxJ9FcvWAcZ3Kn3u462Q/exec';
 
-  // (rien) → accueil + remontée · #commission → dashboard qualité · #audit → audit chantier · #audits → dashboard audits
-  const PAGES = { '#commission': '', '#audit': '?p=audit', '#audits': '?p=audits' };
+  // (rien) → accueil + remontée · #commission → dashboard qualité · #audit → audit chantier · #audits → dashboard audits · #croisee → vue croisée
+  const PAGES = { '#commission': '', '#audit': '?p=audit', '#audits': '?p=audits', '#croisee': '?p=croisee' };
   const url = EXEC_URL + (location.hash in PAGES ? PAGES[location.hash] : '?p=saisie');
   const f = document.createElement('iframe');
   f.src = url;
